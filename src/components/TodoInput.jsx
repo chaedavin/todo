@@ -1,8 +1,7 @@
 function TodoInput(){
-
     return(
         <input/>
-    )
-    }
+    );
+}
 
-export default TodoInput
+export default TodoInput;
