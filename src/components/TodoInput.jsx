@@ -1,6 +1,12 @@
-function TodoInput(){
+function TodoInput({inputValue, setInputValue}){
     return(
-        <input/>
+        <div>
+        <input
+        value={inputValue}
+        onChange={(e) =>{ 
+            setInputValue(e.target.value)}}
+        />
+        </div>
     );
 }
 

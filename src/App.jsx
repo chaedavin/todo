@@ -1,12 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css'
 import TodoInput from './components/TodoInput'
 
 function App() {
-  const [InputValue, SetInputValue] = useState('')
+  const [inputValue, setInputValue] = useState('');
+
+  useEffect(() => {
+    console.log(inputValue);
+  }, [inputValue]);
+
   return (
     <>
-      <TodoInput/>
+      <TodoInput inputValue={inputValue} setInputValue={setInputValue}/>
     </>
   )
 }
